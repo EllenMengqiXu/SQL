@@ -4,8 +4,11 @@ SQL
 This file is basic command as in SQL.
 
 * Create table
+
 CREATE TABLE table_name (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER);
+
 INSERT INTO table_name VALUES(1,’Chocolate Syrup',1,4); 
+
 SELECT * FROM table_name;
 Query table
 SELECT * FROM GroceriesT WHERE aisle > 5 ORDER BY aisle;
