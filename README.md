@@ -1,7 +1,7 @@
 SQL
 ===
 
-This file is basic command as in SQL.
+This file shows basic commands in SQL.
 
 * Create table
 
