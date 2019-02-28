@@ -62,6 +62,16 @@ having conditions (having is like where but applied to the group by block)
 order by column_names (default:asc);
 
 
+Note: after having, you can have a condition with an aggregate function(count, sum, min, max, avg), while where cannot use aggregate functions within its conditions.
+
+how to limit the output quantity?
+
+1. add to the end of query such as limit 10;
+
+2. go to edit --> preference--> SQL Editor --> SQL Execution;
+
+3. select from the top list of the query on workbench, which default as 'limit to 1000 rows'.
+
 
 
 
