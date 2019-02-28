@@ -30,3 +30,18 @@ This file shows basic commands in SQL.
 * Joining tables to themselves with self joins
 
 * Combining multiple joins
+
+MySQL is not case-sensitive.
+
+Wildcard Characters:
+==
+
+% -- a substitute for a sequence of characters 
+
+like ('Mar%') --> Mark, Martin, Margaret
+
+_ -- helps you match a single character
+
+like ('Mar_') --> Mark, Marv, Marl
+
+* --will deliver a list of all columns in a table, it can be used to count all rows of a table.
