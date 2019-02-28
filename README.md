@@ -45,3 +45,21 @@ like ('Mar%') --> Mark, Martin, Margaret
 like ('Mar_') --> Mark, Marv, Marl
 
 '*' --will deliver a list of all columns in a table, it can be used to count all rows of a table.
+
+select rules:
+==
+
+select column_names(s)
+
+from table_name
+
+where conditions
+
+group by column_names
+
+order by column_names (default:asc);
+
+
+
+
+
