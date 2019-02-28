@@ -57,6 +57,8 @@ where conditions
 
 group by column_names
 
+having conditions (having is like where but applied to the group by block)
+
 order by column_names (default:asc);
 
 
