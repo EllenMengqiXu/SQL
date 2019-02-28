@@ -46,6 +46,30 @@ like ('Mar_') --> Mark, Marv, Marl
 
 '*' --will deliver a list of all columns in a table, it can be used to count all rows of a table.
 
+create database
+==
+
+create database [if not exists] database_name;
+
+create schema [if not exists] database_name;
+
+before work on tables first need to tell computer which database you want to work on: use database_name;
+
+create tables
+==
+
+create table table_name (
+  
+  column_1 data_type constraints,
+  
+  column_2 data_type constraints,
+  
+  ...
+
+  column_n data_type constraints,
+  
+);
+
 select rules:
 ==
 
@@ -71,6 +95,55 @@ how to limit the output quantity?
 2. go to edit --> preference--> SQL Editor --> SQL Execution;
 
 3. select from the top list of the query on workbench, which default as 'limit to 1000 rows'.
+
+insert rules:
+==
+
+1. insert record(s)
+
+insert into table_name (column1, column2, ..., columnn) values (value1, value2, ..., valuen);
+
+2. insert table
+
+insert into table_2 (column1, column2, ..., columnn)
+
+select column1, column2, ..., columnn
+
+from table_1;
+
+
+update rules;
+==
+
+update table_name
+
+set
+
+  column1 = value1, column2 = value2,...
+
+where conditions;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
