@@ -124,13 +124,35 @@ set
 where conditions;
 
 
+delete rules;
+==
+
+delete from table_naem
+where conditions;
+
+drop vs truncate vs delete
+==
+
+drop: once you drop a table, it is gone; you cannot roll back to its initial state, or to the last commit statement;
+
+truncate: delete without a where 
+
+*when truncating, auto-increment value will be reset*
+
+delete: removes records row by row
 
 
+*Foreeign key constraint*
+
+on delete cascade
+
+if a specific value from the parent table's primary key has been deleted, all the records from the child table referring to this value will be removed as well.
 
 
+commit;
+rollback;
 
-
-
+sounds like a combo of regret medicine.
 
 
 
