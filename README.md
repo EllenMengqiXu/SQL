@@ -155,6 +155,15 @@ rollback;
 sounds like a combo of regret medicine.
 
 
+aggregation function
+==
+execpt count, sum, min, max, and avg, we also have the following:
+
+1. round(expression, decimal number)
+
+2. ifnull(expression1, expression2)  -- only two parameter -- if the first expression does not satisfied, it will go to the second one
+
+3. coalesce(expressions) -- ifnull() with more than two parameters -- it will go from the left expression to the right until it found out the not null value.
 
 
 
