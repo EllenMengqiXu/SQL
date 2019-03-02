@@ -180,9 +180,9 @@ select t1. column_name1, t1.column_name2, t2.column_name3 from table1 t1 inner j
 
 in order to use group by in join:
 
-'''
+```
 SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
-'''
+```
 
 
 
