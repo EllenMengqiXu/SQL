@@ -184,8 +184,13 @@ in order to use group by in join:
 SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 ```
 
+2. left (outer) join -- inner join plus all values from the left table that match no values from the right table
 
+select t1. column_name1, t1.column_name2, t2.column_name3 from table1 t1 left join table2 t2 on t1.column_name1 = t2.column_name1 order by t1.column_name1;
 
+if you want to get the part all values from the left table that match no values from the right table, you should use where conditions which is 
+
+select t1. column_name1, t1.column_name2, t2.column_name3 from table1 t1 left join table2 t2 on t1.column_name1 = t2.column_name1 **where columnname3(column in right table) is null** order by t1.column_name1;
 
 
 
