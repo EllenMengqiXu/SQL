@@ -171,7 +171,12 @@ execpt count, sum, min, max, and avg, we also have the following:
 
 3. coalesce(expressions) -- ifnull() with more than two parameters -- it will go from the left expression to the right until it found out the not null value.
 
+join
+==
 
+1. (inner) join -- it finds out the common content between two tables based on the same criteria.
+
+select t1. column_name1, t1.column_name2, t2.column_name3 from table1 t1 inner join table2 t2 on t1.column_name1 = t2.column_name1 order by t1.column_name1;
 
 
 
