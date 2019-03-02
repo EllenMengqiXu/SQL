@@ -1,6 +1,12 @@
 SQL
 ===
 
+how to download mysql on Mac?
+
+1. mysql workbench
+2. mysql server -- create password and remember it.
+
+
 This file shows basic commands in SQL.
 
 * Create table
