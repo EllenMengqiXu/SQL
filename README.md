@@ -192,8 +192,9 @@ if you want to get the part all values from the left table that match no values 
 
 select t1. column_name1, t1.column_name2, t2.column_name3 from table1 t1 left join table2 t2 on t1.column_name1 = t2.column_name1 **where columnname3(column in right table) is null** order by t1.column_name1;
 
+3. right (outer) join -- inner join plus all values from the right table that match no values from the left table
 
-
+*Right join seldom run into practice, we can reverse table order of left join to achieve right join*
 
 
 
