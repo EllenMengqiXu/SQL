@@ -196,6 +196,26 @@ select t1. column_name1, t1.column_name2, t2.column_name3 from table1 t1 left jo
 
 *Right join seldom run into practice, we can reverse table order of left join to achieve right join*
 
+4. cross join -- connects qll the values, not jus those that match -- Cartesian Product (vector * vector) 直积
+
+*This suppose table in the database does not connect*
+
+Computer regards join without on as crosss join. But it is not recommendation to use it, cross join is best practice. 
+
+5. join more than two tables
+
+select e.first_name, e.last_name, e.hire_date, m.from_date, d.dept_name from employees e join dept_manager m on e.emp_no = m.emp_no join departments d on m.dept_no = d.dept_no;
+
+6. union vs union all
+
+select e.emp_no, e.first_name, e.last_name, null as dept_no, null as from_date from employees_dup e where e.emp_no = 10001 union (all) select null as emp_no, null as first_name, null as last_name, m.dept_no, m.from_date from dept_manager m;
+
+union displays only distinct values in the output while union all retrieves duplicates as well
+
+7. sub query inner query -- always placed within parentheses
+
+select e.first_name, e.last_name from employees e where e.emp_no in (select dm.emp_no from dept_manager dm);
+
 
 
 
