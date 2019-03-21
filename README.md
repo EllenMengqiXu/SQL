@@ -216,6 +216,10 @@ union displays only distinct values in the output while union all retrieves dupl
 
 select e.first_name, e.last_name from employees e where e.emp_no in (select dm.emp_no from dept_manager dm);
 
+8. view -- show up-to-date data 
+
+create view view_name as select column1, column2, ... from table_name where condition;
+
 
 
 
