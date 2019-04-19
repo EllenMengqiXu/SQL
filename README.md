@@ -232,6 +232,9 @@ CREATE OR REPLACE VIEW v_dept_emp_latest_date AS
 
 Stored Routines (stored procedures & functions)
 ==
+
+### Stored Procedures
+
 Definition: an SQL statement, or a set of SQL statements, that can be stored on the database server
 
 Delimiter: $$ or //
@@ -260,7 +263,7 @@ call procedure_name();
 or
 just click on the excute button near the procedure name in left schemas (looks like flash). *the tool icon tells you whole procedure code.
 
-use in in premiter
+use in in parameter
 ```
 Delimiter $$
 use employees $$
@@ -270,7 +273,7 @@ begin
 end$$
 Delimiter ;
 ```
-use in and out in premiter
+use in and out in parameter
 ```
 Delimiter $$
 use employees $$
@@ -280,5 +283,34 @@ begin
 end$$
 Delimiter ; 
 ```
+variables
 
+1) create a variable
+
+2) extract a value that will be assigned to the newly created variable(call the procedure)
+
+3) ask the software to display the output of the procedure
+
+```
+set @v_avg_salary = 0;
+call employees.emp_avg_salary_out(11300, @v_avg_salary);
+select @v_avg_salary;
+```
+
+### Functions
+
+```
+Delimiter $$
+create function f_emp_avg_salary (p_emp_no integer) returns decimal(10,2)
+begin
+declare v_avg_salary decimal(10,2);
+select avg(s.salary) into v_avg_salary from employees e join salaries s on e.emp_no = s.emp_no where e.emp_no = p_emp_no;
+return v_avg_salary;
+end$$
+delimiter ;
+```
+how to call a function?
+```
+select f_emp_avg_salary(11300);
+```
 
