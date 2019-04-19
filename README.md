@@ -309,6 +309,10 @@ return v_avg_salary;
 end$$
 delimiter ;
 ```
+*if you cannot laod the above query, exucute the below query first
+```
+SET GLOBAL log_bin_trust_function_creators = 1;
+```
 how to call a function?
 ```
 select f_emp_avg_salary(11300);
