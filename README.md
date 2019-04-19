@@ -216,9 +216,44 @@ union displays only distinct values in the output while union all retrieves dupl
 
 select e.first_name, e.last_name from employees e where e.emp_no in (select dm.emp_no from dept_manager dm);
 
-8. view -- show up-to-date data 
+view --show up-to-date data & save coding time
+==
 
-create view view_name as select column1, column2, ... from table_name where condition;
+SQL view : a virtual table whose contents are obtained from an existing table(s), called base tables. 
+
+```
+CREATE OR REPLACE VIEW v_dept_emp_latest_date AS
+    SELECT 
+        emp_no, MAX(from_date) AS from_date, MAX(to_date) AS to_date
+    FROM
+        dept_emp
+    GROUP BY emp_no;
+```
+
+Stored Routines (stored procedures & functions)
+==
+Definition: an SQL statement, or a set of SQL statements, that can be stored on the database server
+
+Delimiter: $$ or //
+
+```
+delimiter $$
+
+create procedure procedure_name()
+begin
+  select ...;
+end$$
+
+delimiter;
+
+```
+call or invoke this procedure
+
+```
+call database_name.procedure_name();
+```
+
+
 
 
 
