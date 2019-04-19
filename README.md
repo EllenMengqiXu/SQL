@@ -252,10 +252,33 @@ call or invoke this procedure
 ```
 call database_name.procedure_name();
 ```
+or 
+if it is already in the database
+```
+call procedure_name();
+```
+or
+just click on the excute button near the procedure name in left schemas (looks like flash). *the tool icon tells you whole procedure code.
 
-
-
-
-
+use in in premiter
+```
+Delimiter $$
+use employees $$
+create procedure emp_avg_salary(in p_emp_no integer)
+begin
+	select e.first_name, e.last_name, s.salary, avg(s.salary) as Avg_Salary from employees e join salaries s on e.emp_no = s.emp_no where e.emp_no =p_emp_no;
+end$$
+Delimiter ;
+```
+use in and out in premiter
+```
+Delimiter $$
+use employees $$
+create procedure emp_avg_salary_out(in p_emp_no integer, out p_avg_salary decimal(10,2))
+begin
+	select avg(s.salary) as Avg_Salary into p_avg_salary from employees e join salaries s on e.emp_no = s.emp_no where e.emp_no =p_emp_no;
+end$$
+Delimiter ; 
+```
 
 
