@@ -318,3 +318,8 @@ how to call a function?
 select f_emp_avg_salary(11300);
 ```
 
+
+Session Variable
+
+A variable that exists only for the session in which you are operating
+
