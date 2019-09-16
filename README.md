@@ -121,6 +121,8 @@ from table_1;
 update rules;
 ==
 
+note: you don't need to update all columns after set, just the columns you want to udpate.
+
 update table_name
 
 set
