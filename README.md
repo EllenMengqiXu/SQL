@@ -131,6 +131,18 @@ set
 
 where conditions;
 
+What is commit and rollback?
+==
+
+1. commit - save the last statement.
+
+if you do some update and result not what you want. you can use rollback.
+
+2. Rollback - go back to the last step before commit. 
+
+before use commit and rollback, make sure toggleautocommit mode is turned on. (the tick and X button on the top of the current page will be blue not grey.)
+
+if you don't commit before rollback, it will go back to the inital step.
 
 delete rules;
 ==
